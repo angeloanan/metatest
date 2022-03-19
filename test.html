@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Test JS Meta tag</title>
+  <meta name="description" content="If this shows up, Javascript is not being run!">
+
+  <script>
+    document.getElementsByTagName('meta')["description"].content = "If this shows up, Javascript in the <head> tag is being evaluated!"
+  </script>
+</head>
+<body>
+
+  <script>
+    document.getElementsByTagName('meta')["description"].content = "If this shows up, Javascript at the end of the body is evaluated!"
+  </script>
+</body>
+</html>
